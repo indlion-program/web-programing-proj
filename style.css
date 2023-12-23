@@ -44,8 +44,17 @@ background-color: rgb(39 54 68 / 26%);
     text-align: center;
     place-content: center;
 }
-.contact_button {
+.courses_button {
     
    align-items: center;
     margin-right: auto;
+}
+
+.courses_box {
+    color: black;
+    height: 100vh;
+    width: 40vh;
+    display: flex;
+    justify-content: center;
+    align-self: center;
 }
