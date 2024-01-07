@@ -4,18 +4,21 @@ function login_pop() {
 } 
 // define elements
 var UpperBox = document.querySelector('div#upperbox');
-
+var isScrolled = false
 
 // all the content is loaded !
 document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('scroll', function () {
-        if (window.scrollY >= 10){
-            UpperBox.setAttribute('scrolled',true);
-            console.log("scrolled!")
+        if (window.scrollY >= 10 & isScrolled == false){
+            isScrolled = true;
+    
+
+            UpperBox.classList.add('scrolled');
         }
-        else {
-            UpperBox.removeAttribute('scrolled');
-            console.log("removed scrolled!");
+        else if (window.scrollY < 10 & isScrolled == true){
+            UpperBox.classList.remove('scrolled');
+            isScrolled = false;
+            
         }
         
     });
